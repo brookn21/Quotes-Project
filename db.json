@@ -1,0 +1,58 @@
+{
+  "quotes": [
+    {
+      "id": 1,
+      "quote": "sidosaindsaobd kndlsad",
+      "author": "brook nega",
+      "category": "inspiration"
+    },
+    {
+      "id": 2,
+      "quote": "sidosaindsaobd kndlsad",
+      "author": "bob",
+      "category": "life"
+    },
+    {
+      "id": 3,
+      "quote": "asnopdasmdklnsdka ndpsaodnlaskdnaskld",
+      "author": "bob",
+      "category": "inspiration"
+    },
+    {
+      "id": 4,
+      "quote": "mbdtf is best album of all time",
+      "author": "kanye",
+      "category": "love"
+    },
+    {
+      "id": 5,
+      "quote": "art quote of the day",
+      "author": "kanye",
+      "category": "art"
+    },
+    {
+      "id": 6,
+      "quote": "motivation quote ",
+      "author": "kanye",
+      "category": "love"
+    },
+    {
+      "quote": "quote",
+      "author": "auth",
+      "category": "category",
+      "id": 7
+    },
+    {
+      "quote": "practice quoteq",
+      "author": "author name",
+      "category": "category name",
+      "id": 8
+    },
+    {
+      "quote": "nskladnaslk",
+      "author": "aijsodaio",
+      "category": "asidasdmasd;l",
+      "id": 9
+    }
+  ]
+}
