@@ -1,8 +1,10 @@
 import React from "react";
 import QuotesCard from "./QuoteCard";
+import Search from "./Search";
+import Sort from "./Sort"
 
-function QoutesHolder(props){
-    const {quotes, setAFavoriteQuote} = props
+function QuotesHolder(props){
+    const {quotes, setAFavoriteQuote, searchTerm, sortedQuotes} = props
 
     const renderQuotes = quotes.map((quote)=>
     <QuotesCard 
@@ -12,6 +14,9 @@ function QoutesHolder(props){
     />)
     return(
         <div>
+            <h2>Quotes</h2>
+            <Sort sortedQuotes={sortedQuotes}/>
+            <Search searchTerm={searchTerm}/>
             {renderQuotes}
         </div>
     )

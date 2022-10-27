@@ -11,6 +11,9 @@ function RandomQuote(props){
 
     return(
         <div>
+            <div className="header">
+            <h1 style={{fontSize: "30px", margin: "10px", color: 'white' }} >Daily Quote</h1>
+        </div>
             <h2>{singleRandomQuote?.quote}</h2>
             <h3>{singleRandomQuote?.author}</h3>
         </div>

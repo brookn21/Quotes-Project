@@ -1,12 +1,9 @@
-import React from "react";
-import QuotesPage from "./QuotesPage"
-import Header from "./Header";
+import React, { useState, useEffect} from "react";
+import RandomQuote from "../components/RandomQuote"
 import Navbar from "../Navbar"
-import Favorites from "../Favorites";
-import Quotes from "../Quotes";
-import Home from "../Home";
+import QuotesHolder from "../components/QuotesHolder";
+import FavoriteQuotes from "../components/FavoriteQuotes";
 import {  Route, Routes } from "react-router-dom";
-import Search from "./Search";
 import { createContext } from "react";
 // import Clock from "../components/Clock"
 
@@ -14,21 +11,92 @@ export const ThemeContext = createContext(null);
 
 function App() {
 
+  const url = " http://localhost:3000/quotes"
+
+  const [quotes, setQuotes] = useState([])
+  const [searchResult, setSearchResult] = useState("")
+  const [ category, setCategory] = useState("")
+  const [ favQuotes, setFavQuotes] = useState([])
+
+  useEffect(()=> fetchQuotes,[])
+
+  function fetchQuotes(){
+      fetch(url)
+      .then(resp => resp.json())
+      .then(setQuotes)
+  }
+
+  function searchTerm(term){
+      setSearchResult(term)
+  }
+
+  function addForm(form){
+      const newObj ={
+          method: "POST",
+          headers:{
+            "Content-type": "application/json",
+            "Accept": "application/json"
+          },
+          body: JSON.stringify(form)
+        }
+        fetch(url,newObj)
+        .then( resp => resp.json())
+        .then(newQuote => setQuotes([...quotes,newQuote]))
+  }
+
+  function sortedQuotes(quote){
+      setCategory(quote)
+  }
+
+  const filteredQuotes = quotes.filter((quote)=> quote.author.toUpperCase().includes(searchResult.toUpperCase()))
+
+  
+  let quotesSorted = [] 
+  function createSortedArray(){
+      if(category === "All"){
+          quotesSorted = [...filteredQuotes]
+      }
+      else{
+          quotesSorted = filteredQuotes.filter((quote)=> quote.category.toUpperCase().includes(category.toUpperCase()))
+      }
+  }
+
+  createSortedArray()
+
+  function setAFavoriteQuote(quoteExample){
+  if( favQuotes.includes(quoteExample)){
+      setFavQuotes(favQuotes.filter((quote) => quote !== quoteExample))
+    }
+  else{
+  setFavQuotes([...favQuotes, quoteExample])
+  }
+  }
+
   return (
 
       <div className="App" >
       <Navbar />
-    <Search/>
       <div className="container">
         <Routes>
-          <Route path="/"element={ <Home />} />
-          <Route path="/favorites"element={ <Favorites />} />
-          <Route path="/quotes"element={ <Quotes />} />
+          <Route path="/"element={ <RandomQuote quotes ={quotes}/>} />
+          {/* <Route path="/favorites"element={ <Favorites />} /> */}
+          <Route path="/quotes"element={ <QuotesHolder 
+          quotes={quotesSorted}
+          setAFavoriteQuote={setAFavoriteQuote}
+          searchTerm={searchTerm}
+          sortedQuotes={sortedQuotes}/> } />
+          <Route path="/favorites"element={ <FavoriteQuotes 
+          favQuotes ={favQuotes} 
+          setAFavoriteQuote={setAFavoriteQuote}
+          searchResult={searchResult}
+          category={category}
+          sortedQuotes={sortedQuotes}
+          searchTerm={searchTerm}
+          />
+        } />
         </Routes>
       </div>
-      <Header />
       {/* <Clock /> */}
-      <QuotesPage />
     </div>
 
   );
