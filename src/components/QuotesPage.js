@@ -3,6 +3,8 @@ import QuotesHolder from "./QuotesHolder";
 import Search from "./Search";
 import AddQuoteForm from "./AddQuoteForm";
 import Sort from "./Sort"
+import RandomQuote from "./RandomQuote";
+import { scryRenderedDOMComponentsWithClass } from "react-dom/test-utils";
 
 function QuotesPage(){
 
@@ -10,6 +12,9 @@ function QuotesPage(){
 
     const [quotes, setQuotes] = useState([])
     const [searchResult, setSearchResult] = useState("")
+    const [ category, setCategory] = useState("")
+    const [ favQuotes, setFavQuotes] = useState([])
+
     useEffect(()=> fetchQuotes,[])
 
     function fetchQuotes(){
@@ -37,20 +42,56 @@ function QuotesPage(){
     }
 
     function sortedQuotes(quote){
-        console.log(quote)
+        setCategory(quote)
     }
 
     const filteredQuotes = quotes.filter((quote)=> quote.author.toUpperCase().includes(searchResult.toUpperCase()))
 
+    
+    let quotesSorted = [] 
+    function createSortedArray(){
+        if(category === "All"){
+            quotesSorted = [...filteredQuotes]
+        }
+        else{
+            quotesSorted = filteredQuotes.filter((quote)=> quote.category.toUpperCase().includes(category.toUpperCase()))
+        }
+    }
+
+    createSortedArray()
+
+    function setAFavoriteQuote(quote){
+    if( favQuotes.includes(quote.id)){
+        setFavQuotes(favQuotes.filter((id) => id !== quote.id))
+      }
+    else{
+    setFavQuotes([...favQuotes, quote.id])
+    }
+    }
+
+    // if( favQuotes.includes(quote)){
+    //     setFavQuotes(favQuotes.filter(id => id !== quote.id))
+    //   }
+    // else{
+    // setFavQuotes([...favQuotes, quote])
+    // }
+
+    // setFavQuotes(favQuotes.filter(id => id !== quote.id))
+    // setFavQuotes([...favQuotes, quote])
 
     return(
         <div>
+            <RandomQuote quotes={quotes}/>
+            <br/>
             <AddQuoteForm addForm={addForm}/>
             <br/>
             <Search searchTerm={searchTerm}/>
             <br/>
             <Sort sortedQuotes={sortedQuotes}/>
-            <QuotesHolder quotes={filteredQuotes}/>
+            <QoutesHolder 
+            quotes={quotesSorted}
+            setAFavoriteQuote={setAFavoriteQuote}
+            />
         </div>
     )
 }

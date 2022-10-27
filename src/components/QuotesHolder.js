@@ -1,13 +1,14 @@
 import React from "react";
 import QuotesCard from "./QuoteCard";
 
-function QuotesHolder(props){
-    const {quotes} = props
+function QoutesHolder(props){
+    const {quotes, setAFavoriteQuote} = props
 
     const renderQuotes = quotes.map((quote)=>
     <QuotesCard 
     quote={quote}
     key={quote.id}
+    setAFavoriteQuote={setAFavoriteQuote}
     />)
     return(
         <div>
