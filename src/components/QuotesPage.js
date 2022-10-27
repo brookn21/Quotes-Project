@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import QoutesHolder from "./QuotesHolder";
+import QuotesHolder from "./QuotesHolder";
 import Search from "./Search";
 import AddQuoteForm from "./AddQuoteForm";
 import Sort from "./Sort"
@@ -50,7 +50,7 @@ function QuotesPage(){
             <Search searchTerm={searchTerm}/>
             <br/>
             <Sort sortedQuotes={sortedQuotes}/>
-            <QoutesHolder quotes={filteredQuotes}/>
+            <QuotesHolder quotes={filteredQuotes}/>
         </div>
     )
 }

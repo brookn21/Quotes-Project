@@ -1,7 +1,7 @@
 import React from "react";
 import QuotesCard from "./QuoteCard";
 
-function QoutesHolder(props){
+function QuotesHolder(props){
     const {quotes} = props
 
     const renderQuotes = quotes.map((quote)=>
@@ -16,4 +16,4 @@ function QoutesHolder(props){
     )
 }
 
-export default QoutesHolder;
+export default QuotesHolder;
