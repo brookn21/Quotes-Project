@@ -5,6 +5,7 @@ import QuotesHolder from "../components/QuotesHolder";
 import FavoriteQuotes from "../components/FavoriteQuotes";
 import {  Route, Routes } from "react-router-dom";
 import { createContext } from "react";
+import AddQuoteForm from './AddQuoteForm'
 // import Clock from "../components/Clock"
 
 export const ThemeContext = createContext(null);
@@ -17,6 +18,7 @@ function App() {
   const [searchResult, setSearchResult] = useState("")
   const [ category, setCategory] = useState("")
   const [ favQuotes, setFavQuotes] = useState([])
+  const [ clicked, setClicked] = useState(true)
 
   useEffect(()=> fetchQuotes,[])
 
@@ -28,6 +30,10 @@ function App() {
 
   function searchTerm(term){
       setSearchResult(term)
+  }
+
+  function checkClicked(){
+    setClicked(!clicked)
   }
 
   function addForm(form){
@@ -84,7 +90,9 @@ function App() {
           quotes={quotesSorted}
           setAFavoriteQuote={setAFavoriteQuote}
           searchTerm={searchTerm}
-          sortedQuotes={sortedQuotes}/> } />
+          sortedQuotes={sortedQuotes}
+          checkClicked={checkClicked}
+          clicked={clicked}/> } />
           <Route path="/favorites"element={ <FavoriteQuotes 
           favQuotes ={favQuotes} 
           setAFavoriteQuote={setAFavoriteQuote}
@@ -94,6 +102,7 @@ function App() {
           searchTerm={searchTerm}
           />
         } />
+          <Route path="/addQuote"element={ <AddQuoteForm addForm={addForm}/>} />
         </Routes>
       </div>
       {/* <Clock /> */}
@@ -103,7 +112,3 @@ function App() {
 }
 
 export default App;
-
-
-
-

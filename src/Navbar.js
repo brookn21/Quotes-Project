@@ -7,8 +7,9 @@ export default function Navbar() {
                 Say What
             </Link>
             <ul>
-                <CustomLink to="/favorites">Favorites</CustomLink>
                 <CustomLink to="/quotes">Quotes</CustomLink>
+                <CustomLink to="/favorites">Favorites</CustomLink>
+                <CustomLink to="/addQuote">Add A Quote</CustomLink>
             </ul>
         </nav>
     )
