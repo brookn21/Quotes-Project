@@ -2,63 +2,177 @@
   "quotes": [
     {
       "id": 1,
-      "quote": "sidosaindsaobd kndlsad",
-      "author": "brook nega",
+      "quote": "“If you don’t like something, change it. If you can’t change it, change your attitude.”",
+      "author": "Maya Angelou",
       "category": "inspiration"
     },
     {
       "id": 2,
-      "quote": "sidosaindsaobd kndlsad",
-      "author": "bob",
+      "quote": "“The greatest glory in living lies not in never falling, but in rising every time we fall.“",
+      "author": "Nelson Mandela",
       "category": "life"
     },
     {
       "id": 3,
-      "quote": "asnopdasmdklnsdka ndpsaodnlaskdnaskld",
-      "author": "bob",
-      "category": "inspiration"
+      "quote": "“The way to get started is to quit talking and begin doing“",
+      "author": "Walt Disney",
+      "category": "life"
     },
     {
       "id": 4,
-      "quote": "mbdtf is best album of all time",
-      "author": "kanye",
+      "quote": "“You know you're in love when you can't fall asleep because reality is finally better than your dreams.”",
+      "author": "Dr. Seuss",
       "category": "love"
     },
     {
       "id": 5,
-      "quote": "art quote of the day",
-      "author": "kanye",
+      "quote": "“The aim of art is to represent not the outward appearance of things, but their inward significance.“",
+      "author": "Aristotle",
       "category": "art"
     },
     {
       "id": 6,
-      "quote": "motivation quote ",
-      "author": "kanye",
+      "quote": "“It is not a lack of love, but a lack of friendship that makes unhappy marriages.”",
+      "author": "Friedrich Nietzsche",
       "category": "love"
     },
     {
-      "quote": "quote",
-      "author": "auth",
+      "quote": "“Love all, trust a few, do wrong to none.”",
+      "author": "William Shakespeare",
       "category": "love",
       "id": 7
     },
     {
-      "quote": "practice quoteq",
-      "author": "author name",
-      "category": "category name",
+      "quote": "“Being deeply loved by someone gives you strength, while loving someone deeply gives you courage.”",
+      "author": "Lao Tzu",
+      "category": "love",
       "id": 8
     },
     {
-      "quote": "nskladnaslk",
-      "author": "aijsodaio",
-      "category": "asidasdmasd;l",
+      "quote": "“The true work of art is but a shadow of the divine perfection.“",
+      "author": "Michelangelo",
+      "category": "art",
       "id": 9
     },
     {
-      "quote": "my quote =asklnda",
-      "author": "authersdbjfasf name",
+      "quote": "“Love is that condition in which the happiness of another person is essential to your own.”",
+      "author": "Robert A. Heinlein",
       "category": "Love",
       "id": 10
+    },
+    {
+      "quote": "“Education is the most powerful weapon which you can use to change the world.”",
+      "author": "Nelson Mandela",
+      "category": "inspiration",
+      "id": 11
+    },
+    {
+      "quote": "“Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma – which is living with the results of other people's thinking.”",
+      "author": "Steve Jobs",
+      "category": "life",
+      "id": 12
+    },
+    {
+      "quote": "“Art, in itself, is an attempt to bring order out of chaos.”",
+      "author": "Stephen Sondheim",
+      "category": "art",
+      "id": 13
+    },
+    {
+      "quote": "“The artist is nothing without the gift, but the gift is nothing without work.”",
+      "author": "Emile Zola",
+      "category": "art",
+      "id": 14
+    },
+    {
+      "quote": "“An artist must be free to choose what he does, certainly, but he must also never be afraid to do what he might choose.”",
+      "author": "Langston Hughes",
+      "category": "art",
+      "id": 15
+    },
+    {
+      "quote": "“Be thankful for what you have; you’ll end up having more. If you concentrate on what you don't have, you will never, ever have enough.”",
+      "author": "Oprah Winfrey",
+      "category": "life",
+      "id": 16
+    },
+    {
+      "quote": "“Keep your face always toward the sunshine―and shadows will fall behind you.”",
+      "author": "Walt Whitman",
+      "category": "inspiration",
+      "id": 17
+    },
+    {
+      "quote": "“If you don’t like the road you’re walking, start paving another one.”",
+      "author": "Dolly Parton",
+      "category": "life",
+      "id": 18
+    },
+    {
+      "quote": "“It always seems impossible until it's done.”",
+      "author": "Nelson Mandela",
+      "category": "inspiration",
+      "id": 19
+    },
+    {
+      "quote": "“When something is important enough, you do it even if the odds are not in your favor.”",
+      "author": "Elon Musk",
+      "category": "inspiration",
+      "id": 20
+    },
+    {
+      "quote": "“With the new day comes new strength and new thoughts.”",
+      "author": "Eleanor Roosevelt",
+      "category": "inspiration",
+      "id": 21
+    },
+    {
+      "quote": "“Setting goals is the first step in turning the invisible into the visible.”",
+      "author": "Tony Robbins",
+      "category": "inspiration",
+      "id": 22
+    },
+    {
+      "quote": "“Always do your best. What you plant now, you will harvest later.”",
+      "author": "Og Mandino",
+      "category": "inspiration",
+      "id": 23
+    },
+    {
+      "quote": "“Art is not what you see, but what you make others see.”",
+      "author": "Edgar Degas",
+      "category": "art",
+      "id": 24
+    },
+    {
+      "quote": "“Where there is love there is life.”",
+      "author": "Mahatma Gandhi",
+      "category": "love",
+      "id": 25
+    },
+    {
+      "quote": "“Art enables us to find ourselves and lose ourselves at the same time.”",
+      "author": "Thomas Merton",
+      "category": "art",
+      "id": 26
+    },
+    {
+      "quote": "“Vision is the art of seeing what is invisible to others.”",
+      "author": "Jonathan Swift",
+      "category": "art",
+      "id": 27
+    },
+    {
+      "quote": "“Success is stumbling from failure to failure with no loss of enthusiasm.”",
+      "author": "Winston Churchill",
+      "category": "life",
+      "id": 28
+    },
+    {
+      "quote": "“Smile and let everyone know that today, you’re a lot stronger than you were yesterday.”",
+      "author": "Drake",
+      "category": "life",
+      "id": 29
     }
   ]
 }
